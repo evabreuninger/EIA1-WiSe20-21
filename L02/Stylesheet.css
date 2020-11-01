@@ -28,7 +28,8 @@
   
   body {
     font-family: arial;
-    font-size: small;
+    font-size: ;
     background: rgba(65, 65, 65, 0.933);
+    color:  #ddd;
 }
 h2 {text color: #af4c4c;}

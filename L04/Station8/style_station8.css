@@ -1,0 +1,28 @@
+html {
+    height: 100%;
+}
+
+body {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    background-image: url(bg.png);
+    font-family: sans-serif;
+}
+
+.karte {
+    position: relative;
+}
+
+.video {
+    position: absolute;
+    top: 65px;
+    left: 65px;
+}
+
+.band {
+    position: absolute;
+    top: 321px;
+    left: 465px;
+}

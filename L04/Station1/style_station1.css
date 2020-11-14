@@ -1,0 +1,44 @@
+html {
+    height: 100%;
+}
+
+body {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    background-image: url(bg.png);
+    font-family: sans-serif;
+}
+
+.karte {
+    position: relative;
+}
+
+.pinguin {
+    position: absolute;
+    top: 230px;
+    left: 460px;
+}
+
+.mistletoe {
+    position: absolute;
+    top: -40px;
+    left: -40px;
+}
+
+h1 {
+    color: white;
+    position: absolute;
+    top: 50px;
+    left: 120px;
+    font-size: 45px;
+}
+
+h2 {
+    color: white;
+    position: absolute;
+    top: 150px;
+    left: 50px;
+    font-size: 23px;
+}

@@ -1,0 +1,68 @@
+html {
+    height: 100%;
+}
+
+body {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    background-image: url(bg.png);
+    font-family: sans-serif;
+}
+
+.karte {
+    position: relative;
+}
+
+.presents {
+    position: absolute;
+    top: 335px;
+    left: 470px;
+}
+
+.mistletoe {
+    position: absolute;
+    top: -40px;
+    left: -40px;
+}
+
+.star {
+    position: absolute;
+    top: 50px;
+    left: 230px;
+}
+
+.star2 {
+    position: absolute;
+    top: 220px;
+    left: 70px;
+}
+
+.star3 {
+    position: absolute;
+    top: 120px;
+    left: 430px;
+}
+
+.tree {
+    position: absolute;
+    top: 40px;
+    left: 420px;
+}
+
+h1 {
+    color: white;
+    position: absolute;
+    top: 120px;
+    left: 60px;
+    font-size: 45px;
+}
+
+h2 {
+    color: white;
+    position: absolute;
+    top: 250px;
+    left: 50px;
+    font-size: 18px;
+}

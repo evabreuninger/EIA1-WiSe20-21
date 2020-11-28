@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Carbon Dioxide Emissions</title>
+    <link rel="stylesheet" href="style_emission.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <nav>
+        <img src="europe.png" onclick="europa()">
+        <img src="northamerica.png" onclick="namerika()">
+        <img src="southamerica.png" onclick="samerika()">
+        <img src="africa.png" onclick="afrika()">
+        <img src="asia.png" onclick="asien()">
+        <img src="australia.png" onclick="australien()">
+    </nav>
+    <h1>
+        Carbon Dioxide Emissions in <span id="titleRegion">Europe</span>
+    </h1>
+
+            
+    <div class="chartWrapper">
+        <div class="chart"></div>
+    </div>
+    
+    <main>
+        <section>
+            <h2 id="absolute"></h2>
+            <p>Emission absolute of Europe in 2018</p>
+        </section>
+        
+        <section>
+            <h2 id="relative"></h2>
+            <p>Relative to total world's emission</p>
+        </section>
+        
+        <section>
+            <h2 id="growth"></h2>
+            <p>Growth rate between 2008 and 2018 (in %)</p>
+        </section>
+        
+        <section>
+            <h2 id="absoluteGrowth"></h2>
+            <p>Growth rate between 2008 and 2018 (absolute)</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Values in kg CO2 per TJ. Source https://www.statista.com/</p>
+    </footer>
+    
+</body>
+</html>

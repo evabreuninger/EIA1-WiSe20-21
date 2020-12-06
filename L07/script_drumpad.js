@@ -9,9 +9,6 @@ var drumPad = [
     new Audio("laugh-2.mp3"),
     new Audio("snare.mp3")
 ];
-function playSample(audio) {
-    audio.play();
-}
 document.querySelector(".audio1").addEventListener("click", function () {
     playSample(drumPad[0]);
 });
@@ -39,16 +36,20 @@ document.querySelector(".audio8").addEventListener("click", function () {
 document.querySelector(".audio9").addEventListener("click", function () {
     playSample(drumPad[8]);
 });
+//Drumpad
+function playSample(audio) {
+    audio.play();
+}
 //Playbutton
-var melodie = [0, 1, 2, 3, 0, 4, 5, 8, 7];
-var x = 0;
-function Button() {
+document.querySelector(".button").addEventListener("click", function () {
+    Sample();
+});
+function Sample() {
+    var melodie = [0, 1, 2, 3, 0, 4, 5, 8, 7];
+    var x = 0;
     setInterval(function () {
         playSample(drumPad[melodie[x]]);
-        x = x + 1;
+        x++;
     }, 500);
 }
-document.querySelector("playButton").addEventListener('click', function () {
-    Button();
-});
 //# sourceMappingURL=script_drumpad.js.map

@@ -1,0 +1,88 @@
+html{
+    height: 100%;
+    background-color: #222222;
+}
+
+body{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    width: 500px;
+    height: 650px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.container div{
+    width: 150px;
+    height: 150px;
+    border-radius: 10%;
+    cursor: pointer;
+}
+
+.audio1{
+    background-color: #e8be4a;
+}
+.audio2{
+    background-color: #a1db43;
+}
+.audio3{
+    background-color: #3be682;
+}
+.audio4{
+    background-color: #2be7ee;
+}
+.audio5{
+    background-color: #296ed6;
+}
+.audio6{
+    background-color: #5837e9;
+}
+.audio7{
+    background-color: #a94ae9;
+}
+.audio8{
+    background-color: #e63973;
+}
+.audio9{
+    background-color: #e23131;
+}
+
+.button{
+    cursor: pointer;
+}
+
+.icons{
+    display: flex;
+    position: relative;
+    height: 80px;
+}
+
+ .fas{
+    cursor: pointer;
+    color: #FFFFFF;
+    margin: 20px;
+    font-size: 75px;
+}
+
+
+.fa-play, .fa-pause{
+    position: absolute;
+    left:0;
+    height: 0;   
+}
+
+.inactive{
+    visibility: hidden;
+    cursor: none;
+}
+
+.active{
+    color: red;
+}

@@ -54,25 +54,14 @@ body{
     background-color: #e23131;
 }
 
-.button{
-    cursor: pointer;
-}
-
 .icons{
-    display: flex;
-    position: relative;
-    height: 80px;
-}
-
- .fas{
     cursor: pointer;
     color: #FFFFFF;
     margin: 20px;
     font-size: 75px;
 }
 
-
-.fa-play, .fa-pause{
+.play, .stop{
     position: absolute;
     left:0;
     height: 0;   

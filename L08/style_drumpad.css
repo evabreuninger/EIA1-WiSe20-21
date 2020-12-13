@@ -55,16 +55,21 @@ body{
 }
 
 .icons{
+    display: flex;
+    position: relative;
+    height: 80px;
+}
+
+.fas{
     cursor: pointer;
     color: #FFFFFF;
     margin: 20px;
     font-size: 75px;
+    width: left;
 }
 
-.play, .stop{
+.fa-play, .fa-pause{
     position: absolute;
-    left:0;
-    height: 0;   
 }
 
 .inactive{
@@ -74,4 +79,11 @@ body{
 
 .active{
     color: red;
+}
+
+p{
+    color: white;
+    font-size: 28px;
+    font-family: Brush Script MT, Brush Script Std, cursive;
+    margin-left: -40px;
 }

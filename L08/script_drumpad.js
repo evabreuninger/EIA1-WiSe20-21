@@ -49,12 +49,11 @@ document.querySelector(".audio9").addEventListener("click", function () {
 function playSample(audio) {
     audio.play();
 }
-//Play & Pause Button
+//Mic & Trash Button
 var trashIcon = document.getElementById("trash");
 var recordIcon = document.getElementById("mic");
 var beat = [];
 var abfrage;
-//Eventlistener für Record und Löschen Button
 recordIcon.addEventListener("click", function () {
     if (recordIcon.classList.contains("active")) {
         recordIcon.classList.remove("active");
@@ -69,25 +68,11 @@ recordIcon.addEventListener("click", function () {
 trashIcon.addEventListener("click", function () {
     deleting();
 });
-//Funktionen für für Record und Löschen Button
-function recording(i) {
-    console.log(abfrage);
-    if (abfrage == true) {
-        beat.push(i);
-        console.log(beat.length);
-    }
-}
-function deleting() {
-    beat.splice(0, beat.length);
-    console.log(beat.length);
-}
-// Funktion für Play und Pause Button
-//Variablen für Play und Pause Button
+//Play & Pause Button
 var playIcon = document.getElementById("play");
 var stopIcon = document.getElementById("stop");
 var myInterval;
 var i;
-//Eventlistener für Play und Pause Button
 playIcon.addEventListener("click", function () {
     Schleife(true);
     playIcon.classList.add("inactive");
@@ -98,7 +83,7 @@ stopIcon.addEventListener("click", function () {
     stopIcon.classList.add("inactive");
     playIcon.classList.remove("inactive");
 });
-//Funktion für Play und Pause Button
+//Funktion Play
 function Schleife(b) {
     if (b == true) {
         myInterval = setInterval(function () {
@@ -114,5 +99,17 @@ function Schleife(b) {
     else {
         clearInterval(myInterval);
     }
+}
+//recording & delet
+function recording(i) {
+    console.log(abfrage);
+    if (abfrage == true) {
+        beat.push(i);
+        console.log(beat.length);
+    }
+}
+function deleting() {
+    beat.splice(0, beat.length);
+    console.log(beat.length);
 }
 //# sourceMappingURL=script_drumpad.js.map

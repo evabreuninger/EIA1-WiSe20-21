@@ -52,15 +52,13 @@ function playSample(audio: HTMLAudioElement) {
     audio.play();
 }
 
-//Play & Pause Button
-
+//Mic & Trash Button
 let trashIcon: HTMLElement = document.getElementById("trash")
 let recordIcon: HTMLElement = document.getElementById("mic")
 
 let beat: HTMLAudioElement [] = [];
 let abfrage: boolean;
 
-//Eventlistener für Record und Löschen Button
 recordIcon.addEventListener("click", () => {
     if (recordIcon.classList.contains("active")) {
         recordIcon.classList.remove("active");
@@ -77,37 +75,17 @@ trashIcon.addEventListener("click", () => {
     deleting();
 });
 
-//Funktionen für für Record und Löschen Button
-function recording (i: HTMLAudioElement)  {
-    console.log(abfrage);
-    if (abfrage == true) {
-        beat.push(i);
-        console.log(beat.length);
-    }
-}
-
-function deleting () {
-    beat.splice(0, beat.length);
-    console.log(beat.length);
-}
-
-
-// Funktion für Play und Pause Button
-
-//Variablen für Play und Pause Button
+//Play & Pause Button
 let playIcon: HTMLElement = document.getElementById("play")
 let stopIcon: HTMLElement = document.getElementById("stop")
 
 let myInterval;    
 let i;
 
-//Eventlistener für Play und Pause Button
 playIcon.addEventListener("click", () => {
     Schleife(true);
     playIcon.classList.add("inactive");
     stopIcon.classList.remove("inactive");
-    
-
 });
 
 stopIcon.addEventListener("click", () => {
@@ -116,7 +94,7 @@ stopIcon.addEventListener("click", () => {
     playIcon.classList.remove("inactive");
 });
 
-//Funktion für Play und Pause Button
+//Funktion Play
 function Schleife (b: boolean) {
 
     if (b == true) {
@@ -137,4 +115,18 @@ function Schleife (b: boolean) {
     else {
         clearInterval(myInterval);
     }
+}
+
+//recording & delet
+function recording (i: HTMLAudioElement)  {
+    console.log(abfrage);
+    if (abfrage == true) {
+        beat.push(i);
+        console.log(beat.length);
+    }
+}
+
+function deleting () {
+    beat.splice(0, beat.length);
+    console.log(beat.length);
 }

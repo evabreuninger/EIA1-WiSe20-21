@@ -79,8 +79,8 @@ trashIcon.addEventListener("click", () => {
 let playIcon: HTMLElement = document.getElementById("play")
 let stopIcon: HTMLElement = document.getElementById("stop")
 
-let myInterval;    
-let i;
+let myInterval: number;    
+let i: number;
 
 playIcon.addEventListener("click", () => {
     Schleife(true);
@@ -104,14 +104,12 @@ function Schleife (b: boolean) {
             if (i < beat.length) {
                 playSample(beat[i]);
                 i++;
-            }
-            
+            }            
             else {
                 i = 0;
             }
         },500 );
-    }
-    
+    }    
     else {
         clearInterval(myInterval);
     }

@@ -61,17 +61,7 @@ h1{
     color:  #711983;
 }
 
-.placeHolder{
-    position: relative;
-    width: 310px;
-    height: 30px;
-    outline: 0;
-    font-size: 23px;
-    background-color: #fff;
-    color:  #711983;
-}
-
-input.CheckBox{
+input.TaskComplete{
     position: absolute;
     margin: 0px;
     width: 50px;
@@ -87,8 +77,6 @@ input.CheckBox{
 
 .fa-trash-alt{
     position: absolute;
-    right: 16px;
-    top: 25px;
     font-size: 30px;
     color:#000000;
     cursor: pointer;

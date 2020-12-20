@@ -1,0 +1,104 @@
+html{
+    height: 100%;
+    background-color: black;
+    font-family: sans-serif;
+}
+
+.hero-image {
+    background-image: url("Koi_EvaBreuninger.jpg");
+    height: 950px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+  
+input{
+    width: 310px;
+    height: 30px;
+    outline: 0;
+    border: none;
+    font-size: 25px;
+    background: #fff;
+    color: #711983;
+}
+
+form{
+    background-color: #fff;
+    padding: 10px;
+}
+
+button{
+    font-size: 25px;
+    color: #10143d;
+    background-color: #fff;
+    outline: 0;
+    border: none;
+    width: 150px;
+}
+
+.list{
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: auto;
+  }
+
+h1{
+    text-align: center;
+    color: #fff;
+    font-size: 50px;
+}
+
+.newTask{
+    position: relative;
+    width: 310px;
+    height: 30px;
+    outline: 0;
+    font-size: 23px;
+    background-color: #fff;
+    color:  #711983;
+}
+
+.placeHolder{
+    position: relative;
+    width: 310px;
+    height: 30px;
+    outline: 0;
+    font-size: 23px;
+    background-color: #fff;
+    color:  #711983;
+}
+
+input.CheckBox{
+    position: absolute;
+    margin: 0px;
+    width: 50px;
+    height: 50px;
+}
+
+.divLabel{
+    position: absolute;
+    width: 100%;
+    left: 70px;
+    top: 25px;
+}
+
+.fa-trash-alt{
+    position: absolute;
+    right: 16px;
+    top: 25px;
+    font-size: 30px;
+    color:#000000;
+    cursor: pointer;
+}
+
+#counter {
+    color: #b15dc2;
+    font-size: 20px;
+    text-shadow:  1px  1px 1px black,
+                  1px -1px 1px black,
+                 -1px  1px 1px black,
+                 -1px -1px 1px black;
+}

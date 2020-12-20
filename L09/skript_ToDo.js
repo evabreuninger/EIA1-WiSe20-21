@@ -14,7 +14,7 @@ document.getElementById("submit").addEventListener("click", function () {
 function createNewTask() {
     index++;
     counter();
-    var Liste = document.getElementById("list");
+    var taskList = document.getElementById("taskList");
     var newTask = document.createElement("div");
     newTask.className = "NewTask";
     var checkbox = document.createElement("input");
@@ -26,13 +26,13 @@ function createNewTask() {
     var deleteIcon = document.createElement("i");
     deleteIcon.className = "fas fa-trash-alt";
     //New Task wird erstellt
-    Liste.appendChild(newTask);
+    taskList.appendChild(newTask);
     newTask.appendChild(checkbox);
     newTask.appendChild(label);
     newTask.appendChild(trashIcon);
     //delete
     deleteIcon.addEventListener("click", function () {
-        Liste.removeChild(newTask);
+        taskList.removeChild(newTask);
         index--;
         counter();
     });

@@ -18,7 +18,7 @@ function createNewTask(): void {
     index++;
     counter();
 
-    let Liste: HTMLElement = document.getElementById("list");
+    let taskList: HTMLElement = document.getElementById("taskList");
     let newTask: HTMLDivElement = document.createElement("div");
     newTask.className = "NewTask";
 
@@ -34,14 +34,14 @@ function createNewTask(): void {
     deleteIcon.className = "fas fa-trash-alt";
 
     //New Task wird erstellt
-    Liste.appendChild(newTask);
+    taskList.appendChild(newTask);
     newTask.appendChild(checkbox);
     newTask.appendChild(label);
     newTask.appendChild(trashIcon);
 
     //delete
     deleteIcon.addEventListener("click", function (): void {
-        Liste.removeChild(newTask);
+        taskList.removeChild(newTask);
         index--;
         counter();
     });

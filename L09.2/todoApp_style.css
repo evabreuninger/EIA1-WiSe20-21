@@ -1,0 +1,83 @@
+html{
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    font-family: sans-serif;
+}
+
+.hero-image {
+    background-image: url("Koi_EvaBreuninger.jpg");
+    height: 950px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+h1{
+    text-align: center;
+    color: #fff;
+    font-size: 50px;
+}
+
+div{
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: auto;
+}
+
+input{
+    position: relative;
+    width: 310px;
+    height: 30px;
+    outline: 0;
+    font-size: 23px;
+    background-color: #fff;
+    color:  #711983;
+}
+
+.isHidden {
+    display: none !important;
+}
+
+.fa-square{
+    margin-top: 15px;
+    margin-left: 5px;
+    margin-right:50px;
+    font-size: 15px;
+}
+.fa-square:hover {
+    cursor: pointer;
+}
+.fa-check-square{
+    margin-top: 15px;
+    margin-left: 5px;
+    margin-right: 5px;
+    font-size: 15px;
+}
+.fa-check-square:hover {
+    cursor: pointer;
+}
+.fa-trash-alt{
+    position: absolute;
+    margin-top: 20px;
+    left: 95%;
+    opacity: 50%;
+    font-size: 25px;
+    color: #78737e;
+    transition: all 0.4s ease-out;
+}
+.fa-trash-alt:hover {
+    cursor: pointer;
+    opacity: 100%;
+}
+
+h2{
+    color: #b15dc2;
+    font-size: 20px;
+    text-shadow:  1px  1px 1px black,
+                  1px -1px 1px black,
+                 -1px  1px 1px black,
+                 -1px -1px 1px black;
+}

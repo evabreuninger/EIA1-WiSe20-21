@@ -1,4 +1,4 @@
-var createTask = document.getElementById("addTask");
+var createTasks = document.getElementById("addTask");
 var index = 0;
 //Counter
 function counter() {
@@ -29,7 +29,7 @@ function createNewTask() {
     taskList.appendChild(newTask);
     newTask.appendChild(checkbox);
     newTask.appendChild(label);
-    newTask.appendChild(trashIcon);
+    newTask.appendChild(deleteIcon);
     //delete
     deleteIcon.addEventListener("click", function () {
         taskList.removeChild(newTask);

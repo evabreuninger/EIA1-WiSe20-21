@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "..\\Steckbrief"
+		},
+		{
+			"path": ".."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "EIA1-WiSe20-21"
+	}
+}

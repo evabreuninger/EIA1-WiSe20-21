@@ -1,4 +1,4 @@
-let createTask: HTMLInputElement = (document.getElementById("addTask") as HTMLInputElement);
+let createTasks: HTMLInputElement = (document.getElementById("addTask") as HTMLInputElement);
 let index: number = 0;
 
 //Counter
@@ -37,7 +37,7 @@ function createNewTask(): void {
     taskList.appendChild(newTask);
     newTask.appendChild(checkbox);
     newTask.appendChild(label);
-    newTask.appendChild(trashIcon);
+    newTask.appendChild(deleteIcon);
 
     //delete
     deleteIcon.addEventListener("click", function (): void {

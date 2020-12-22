@@ -6,11 +6,10 @@ html{
 
 .hero-image {
     background-image: url("Koi_EvaBreuninger.jpg");
-    height: 950px;
+    height: 550px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    position: relative;
 }
 
 h1{
@@ -41,28 +40,18 @@ input{
     display: none !important;
 }
 
-.fa-square{
-    margin-top: 15px;
-    margin-left: 5px;
-    margin-right:50px;
-    font-size: 15px;
-}
+
 .fa-square:hover {
     cursor: pointer;
 }
-.fa-check-square{
-    margin-top: 15px;
-    margin-left: 5px;
-    margin-right: 5px;
-    font-size: 15px;
-}
+
 .fa-check-square:hover {
     cursor: pointer;
 }
 .fa-trash-alt{
     position: absolute;
     margin-top: 20px;
-    left: 95%;
+    left: 90%;
     opacity: 50%;
     font-size: 25px;
     color: #78737e;
@@ -71,6 +60,18 @@ input{
 .fa-trash-alt:hover {
     cursor: pointer;
     opacity: 100%;
+}
+
+.fa-square{
+    margin-top: 25px;
+    margin-right:50px;
+    font-size: 15px;
+}
+
+.fa-check-square{
+    margin-top: 15px;
+    margin-right: 5px;
+    font-size: 15px;
 }
 
 h2{

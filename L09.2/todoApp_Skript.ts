@@ -4,6 +4,7 @@ var userTask: any = document.getElementById("newTask");
 var checkInputBool: boolean = false;
 var preventEvent: boolean = false;
 
+//Eingabe durch Entertaste
 document.addEventListener("keydown", function(event: KeyboardEvent): void {
     if (event.keyCode == 13 && checkInputBool == true) {
             createTask();
@@ -14,22 +15,18 @@ document.addEventListener("keydown", function(event: KeyboardEvent): void {
     }
 });
 
-
 document.addEventListener("click", function(): void {
     if (preventEvent == false) {
     checkInputBool = false;
     }
 });
-
-
 userTask.addEventListener("click", function(): void {
     checkInputBool = true;
     preventEvent = true;
 });
 
-function createTask (): void {
-
-    
+//Neuen Task anlegen
+function createTask (): void {  
     let container: HTMLDivElement = document.createElement("div");
     let icon1: HTMLElement = document.createElement("i");
     icon1.className = "far fa-square";
@@ -40,7 +37,6 @@ function createTask (): void {
     text.innerHTML = userTask.value;
     let icon3: HTMLElement = document.createElement("i");
     icon3.className = "fas fa-trash-alt";
-
   
     document.body.appendChild(container);
     container.appendChild(icon1);
@@ -51,18 +47,15 @@ function createTask (): void {
    
     zahl = zahl + 1;
     counter();
-
     
     icon1.addEventListener("click", function(): void {
         icon1.classList.add("isHidden");
         icon2.classList.remove("isHidden");
     });
-
     icon2.addEventListener("click", function(): void {
         icon2.classList.add("isHidden");
         icon1.classList.remove("isHidden");
     });
-
     icon3.addEventListener("click", function(): void {
         document.body.removeChild(container);
         zahl = zahl - 1;

@@ -2,6 +2,7 @@ var zahl = 0;
 var userTask = document.getElementById("newTask");
 var checkInputBool = false;
 var preventEvent = false;
+//Eingabe durch Entertaste
 document.addEventListener("keydown", function (event) {
     if (event.keyCode == 13 && checkInputBool == true) {
         createTask();
@@ -20,6 +21,7 @@ userTask.addEventListener("click", function () {
     checkInputBool = true;
     preventEvent = true;
 });
+//Neuen Task anlegen
 function createTask() {
     var container = document.createElement("div");
     var icon1 = document.createElement("i");

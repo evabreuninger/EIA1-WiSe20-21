@@ -44,7 +44,6 @@ function createTask (): void {
     container.appendChild(text);
     container.appendChild(icon3);
 
-   
     zahl = zahl + 1;
     counter();
     

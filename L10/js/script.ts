@@ -14,7 +14,7 @@ var Aufgaben_Array: Aufgabe[] = [
     checked: false,
 },
     {
-    name: "Zimmer aufäumen -.-",
+    name: "Zimmer aufräumen -.-",
     checked: false,
 },  
 ]

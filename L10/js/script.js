@@ -8,7 +8,7 @@ var Aufgaben_Array = [
         checked: false,
     },
     {
-        name: "Zimmer aufäumen -.-",
+        name: "Zimmer aufräumen -.-",
         checked: false,
     },
 ];

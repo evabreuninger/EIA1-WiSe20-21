@@ -159,7 +159,6 @@ function deleteTodo(index) {
      * das ToDo-Text-Array und das Checked/Unchecked-Array
      */
     Aufgaben_Array.splice(index, 1);
-    Aufgaben_Array.splice(index, 1);
     /**
      * Die zentrale Funktion, um die Liste des ToDo-Arrays in den DOM zu rendern
      * wird wieder getriggert

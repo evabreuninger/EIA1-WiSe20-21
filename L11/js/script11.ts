@@ -16,7 +16,7 @@ var Aufgaben_Array: Aufgabe[] = [
     {
     name: "Zimmer aufräumen -.-",
     checked: false,
-},  
+},
 ]
 
 var inputDOMElement: HTMLInputElement;
@@ -26,7 +26,7 @@ var counterDOMElement: HTMLElement;
 var doneDOMElement: HTMLElement;
 var leftDOMElement: HTMLElement;
 
-
+window.addEventListener("load", function(): void {
 inputDOMElement = document.querySelector("#inputTodo");
 addButtonDOMElement = document.querySelector("#addButton");
 todosDOMElement = document.querySelector("#todos");
@@ -35,8 +35,8 @@ doneDOMElement = document.querySelector("#done");
 leftDOMElement = document.querySelector("#left");
 
 addButtonDOMElement.addEventListener("click", addTodo);
-
 drawListToDOM();
+});
 
 function drawListToDOM(): void {
     // alle todos erst einmal aus dem DOM löschen
@@ -115,53 +115,36 @@ function deleteTodo(index: number): void {
 }
 
 //Artyom deklarieren und erstellen
-declare var Artyom: any;     
+declare var Artyom: any;
+
+window.addEventListener("load", function(): void {
+document.querySelector("#voice").addEventListener("click", function () {
     const artyom: any = new Artyom();
-
-    document.querySelector("#micro").addEventListener("click", function () {
-        artyom.addCommands([
-            {
-                indexes: ["Erstelle Aufgabe *"],
-                smart: true,
-                action: (i, wildcard) => {
-                    console.log("Neue Aufgabe wird erstellt: " + wildcard);
-                    console.log(wildcard);
-                    Aufgaben_Array.unshift(
-                        {
-                        name: wildcard,
-                        checked: false
-                        }
-                    )
-                    drawListToDOM();
+    
+    artyom.addCommands([{
+        indexes: ["Erstelle Aufgabe *"],
+        smart: true,
+        action: (i, wildcard) => {
+            console.log("Neue Aufgabe wird erstellt: " + wildcard);
+            Aufgaben_Array.unshift(
+                {
+                name: wildcard,
+                checked: false
                 }
-            }
-        ]);
-
-        artyom.initialize({
-            debug: true,
-            continuous: true,
-            lang: "de-DE",
-            listen: true
-        }).then(() => {
-            console.log("Ready!");
-        
-            artyom.when("NOT_COMMAND_MATCHED"), function() {
-                artyom.say("Ich konnte dich leider nicht verstehen")
-            }   
-        }); 
-
-    })
-
-    document.querySelector("#stop").addEventListener("click", function() {
-       
-        // Stop Artyom
-        // fatality -> Erlaubt Deaktivierung
-        
-            artyom.fatality().then(() => {
-                console.log("Artyom wurde erfolgreich gestoppt");
-                artyom.say("Ich wollte dir doch noch zuhören, dann halt nicht")
-            });
-        
-
-    })
-   
+            )
+            drawListToDOM();
+        }
+    }
+    ]);
+    artyom.initialize({
+        debug: true,
+        continuous: true,
+        lang: "de-DE",
+        listen: true
+    }) 
+document.querySelector("#stop").addEventListener("click", function() {
+    artyom.fatality().then(() => {
+        console.log("Artyom gestoppt");
+    });
+})
+}

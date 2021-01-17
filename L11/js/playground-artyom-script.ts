@@ -4,7 +4,7 @@ window.addEventListener("load", function(): void {
     const artyom: any = new Artyom();
     
     artyom.addCommands({
-        indexes: ["erstelle Aufgabe *"],
+        indexes: ["Erstelle Aufgabe "],
         smart: true,
         action: function(i: any, wildcard: string): void {
             console.log("Neue Aufgabe wird erstellt: " + wildcard);

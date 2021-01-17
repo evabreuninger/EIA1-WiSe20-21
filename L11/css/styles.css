@@ -95,3 +95,27 @@ main {
 .trash:hover {
     color: black;
 }
+
+.fa-microphone {
+    position: absolute;
+    top: 12px;
+    left: 390px;
+    color: grey;
+    font-size: 30px;
+}
+
+.fa-microphone:hover {
+    color: black;
+}
+
+.fa-stop {
+    position: absolute;
+    top: 12px;
+    left: 420px;
+    color:grey;
+    font-size: 30px;
+}
+
+.fa-stop:hover {
+    color: black;
+}

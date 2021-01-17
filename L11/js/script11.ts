@@ -26,19 +26,17 @@ var counterDOMElement: HTMLElement;
 var doneDOMElement: HTMLElement;
 var leftDOMElement: HTMLElement;
 
-window.addEventListener("load", function(): void {
 
-    inputDOMElement = document.querySelector("#inputTodo");
-    addButtonDOMElement = document.querySelector("#addButton");
-    todosDOMElement = document.querySelector("#todos");
-    counterDOMElement = document.querySelector("#counter");
-    doneDOMElement = document.querySelector("#done");
-    leftDOMElement = document.querySelector("#left");
+inputDOMElement = document.querySelector("#inputTodo");
+addButtonDOMElement = document.querySelector("#addButton");
+todosDOMElement = document.querySelector("#todos");
+counterDOMElement = document.querySelector("#counter");
+doneDOMElement = document.querySelector("#done");
+leftDOMElement = document.querySelector("#left");
 
-    addButtonDOMElement.addEventListener("click", addTodo);
+addButtonDOMElement.addEventListener("click", addTodo);
 
-    drawListToDOM();
-});
+drawListToDOM();
 
 function drawListToDOM(): void {
     // alle todos erst einmal aus dem DOM löschen
@@ -87,7 +85,7 @@ function updatedone(): void {
 function updateleft(): void {
     var left = 0;
     for (var index=0; index < Aufgaben_Array.length; index++) {
-        if (Aufgaben_Array[index].checked == false)
+        if (Aufgaben_Array[index].checked == false)     
         left++
     }
 
@@ -99,8 +97,7 @@ function addTodo(): void {
         Aufgaben_Array.unshift({
             name: inputDOMElement.value,
             checked: false
-        });
-        
+        })
         inputDOMElement.value = "";
 
         drawListToDOM();
@@ -116,3 +113,55 @@ function deleteTodo(index: number): void {
     Aufgaben_Array.splice(index, 1);
     drawListToDOM();
 }
+
+//Artyom deklarieren und erstellen
+declare var Artyom: any;     
+    const artyom: any = new Artyom();
+
+    document.querySelector("#micro").addEventListener("click", function () {
+        artyom.addCommands([
+            {
+                indexes: ["Erstelle Aufgabe *"],
+                smart: true,
+                action: (i, wildcard) => {
+                    console.log("Neue Aufgabe wird erstellt: " + wildcard);
+                    console.log(wildcard);
+                    Aufgaben_Array.unshift(
+                        {
+                        name: wildcard,
+                        checked: false
+                        }
+                    )
+                    drawListToDOM();
+                }
+            }
+        ]);
+
+        artyom.initialize({
+            debug: true,
+            continuous: true,
+            lang: "de-DE",
+            listen: true
+        }).then(() => {
+            console.log("Ready!");
+        
+            artyom.when("NOT_COMMAND_MATCHED"), function() {
+                artyom.say("Ich konnte dich leider nicht verstehen")
+            }   
+        }); 
+
+    })
+
+    document.querySelector("#stop").addEventListener("click", function() {
+       
+        // Stop Artyom
+        // fatality -> Erlaubt Deaktivierung
+        
+            artyom.fatality().then(() => {
+                console.log("Artyom wurde erfolgreich gestoppt");
+                artyom.say("Ich wollte dir doch noch zuhören, dann halt nicht")
+            });
+        
+
+    })
+   
